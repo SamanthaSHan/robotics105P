@@ -273,6 +273,26 @@ void checkIfVisitedP1(){
   }
 }
 
+struct position *generatePath(int i, int j){
+  struct position *thePath = malloc(sizeof(int)*verticies[i][j].distance +1);
+  struct position toStore;
+  toStore.i = i;
+  toStore.j = j;
+  int index = verticies[i][j].distance;
+  thePath[index] = toStore;
+  toStore.i = verticies[toStore.i][toStore.j].parent_i;
+  toStore.j = verticies[toStore.i][toStore.j].parent_j;
+  while((toStore.i > -1)&&(toStore.j > -1)){
+    index--;
+    thePath[index] = toStore;
+    toStore.i = verticies[toStore.i][toStore.j].parent_i;
+    toStore.j = verticies[toStore.i][toStore.j].parent_j;   
+  }
+  toStore.i = 0; toStore.j = 0;
+  thePath[0] = toStore;
+  return thePath;
+}
+
 int main(){
   //initialization
   init();
@@ -385,5 +405,7 @@ int main(){
   //Find shortest path
   findShortest(); //when this is done, we will have all neccessary info in "verticies" array
   checkIfVisitedP1();
-  
+  struct position *thePath;
+  thePath = generatePath(3,3);
+
 }
