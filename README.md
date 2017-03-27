@@ -1,7 +1,8 @@
 ## Robotics using ActivityBot
 **COMP105P accomplishments while at UCL**
+
+### Note
 ```
-**NOTE**
 Code explained below are optimized for the simulator NOT for the actual robot
 ```
 1. First file contains phase 1 of the final project. It has a wall following algorithm and stores neccessary variables
