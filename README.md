@@ -2,9 +2,9 @@
 **COMP105P accomplishments while at UCL**
 
 ### Note
-```
-Code explained below are optimized for the simulator NOT for the actual robot
-```
+
+Code explained below are optimized for the simulator __NOT__ for the actual robot
+
 1. First file contains phase 1 of the final project. It has a wall following algorithm and stores neccessary variables
 2. Second file contains phase 2.It uses information gathered from phase 1 to run Dijkstra's algorithm to find the shortest path
 3. Third file "finaltask_sh" contains the submitted version of the project. 
